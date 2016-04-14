@@ -16,6 +16,12 @@ import timber.log.Timber;
  */
 public class Fragment1 extends Fragment {
 
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        Timber.d("Fragment1 onCreateView");
+        return inflater.inflate(R.layout.fragment_1, null);
+    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -25,12 +31,6 @@ public class Fragment1 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Timber.d("Fragment1 onCreate");
-    }
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        Timber.d("Fragment1 onCreateView");
-        return inflater.inflate(R.layout.fragment_1, null);
     }
 
     public void onActivityCreated(Bundle savedInstanceState) {

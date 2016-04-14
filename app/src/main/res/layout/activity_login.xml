@@ -52,6 +52,16 @@
                 android:name="jeka.androidtester.developstart.ui.fragment.Fragment1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:layout_marginTop="16dp">
+            </fragment>
+
+            <fragment
+                android:name="jeka.androidtester.developstart.ui.fragment.Fragment1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
                 android:layout_weight="1">
             </fragment>
 
