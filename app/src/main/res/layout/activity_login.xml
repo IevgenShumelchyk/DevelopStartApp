@@ -50,6 +50,11 @@
             android:layout_height="wrap_content"
             android:text="implicit Intent" />
 
+        <Button
+            android:id="@+id/btnIntentContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contacts Intent" />
 
         <LinearLayout
             android:id="@+id/llFragments"

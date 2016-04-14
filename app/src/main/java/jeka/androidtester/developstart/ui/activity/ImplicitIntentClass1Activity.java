@@ -20,8 +20,5 @@ public class ImplicitIntentClass1Activity extends AppCompatActivity {
         Intent intent = getIntent();
         String mess = intent.getStringExtra("mess");
         tvMessReceiver.setText("Activity Class 1 Receive: " + mess);
-
-        // ПОЧЕМУ ТАК НЕ РАБОТАЕТ ?
-        //(TextView) findViewById(R.id.tvMessReceiver).setText("Activity Receive: " + getIntent().getStringExtra("mess"));
     }
 }
