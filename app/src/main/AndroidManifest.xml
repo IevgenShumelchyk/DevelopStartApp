@@ -3,18 +3,19 @@
     package="jeka.androidtester.developstart">
 
     <!-- Разрешения для данной ветки приложения -->
-    <uses-permission android:name="android.permission.INTERNET" />     <!-- Для работы с инетом -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- Это описание самого приложения-->
+    <!-- Для работы с инетом -->
+    <!-- Это описание самого приложения -->
     <application
+        android:name=".App"
         android:allowBackup="true"
-        android:supportsRtl="true"
-        android:name="jeka.androidtester.developstart.App"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,10 +23,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!--
-
         Необходимо указывать чтобы работали google play services
         <meta-data
             android:name="com.google.android.gms.version"
@@ -77,7 +85,6 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/syncadapter" />
         </service>
-
         -->
 
     </application>

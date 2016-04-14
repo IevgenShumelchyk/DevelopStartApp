@@ -1,21 +1,22 @@
-package jeka.androidtester.developstart;
+package jeka.androidtester.developstart.ui.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import jeka.androidtester.developstart.databinding.MainActivityBinding;
+import jeka.androidtester.developstart.R;
+import jeka.androidtester.developstart.databinding.LoginActivityBinding;
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
-    private MainActivityBinding binding;
+    private LoginActivityBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
         binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
