@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jeka.androidtester.developstart">
+
+    <!-- Разрешения для данной ветки приложения -->
+    <uses-permission android:name="android.permission.INTERNET" />     <!-- Для работы с инетом -->
+
+    <!-- Это описание самого приложения-->
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:name="jeka.androidtester.developstart.App"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--
+
+        Необходимо указывать чтобы работали google play services
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> 6587000
+
+        Главная активити приложения
+        <activity android:name=".ui.MainActivity" />
+
+        Сплеш скрин приложения
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name">
+            В этом теге мы указали данные
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        Контент провайдер, нужен для того чтобы отдавать данные в систему и в приложение в частности
+        флаг exported отвечает за доступ приложениям извне
+        syncable - отвечает можно ли синхронизировать этот провайдер
+        <provider
+            android:authorities="@string/content_authority"
+            android:name=".data.WtmProvider"
+            android:exported="false"
+            android:syncable="true" />
+
+        Сервис - пустышка, нужен исключительно для того чтобы можно было работать с синхронизацией
+        <service android:name=".sync.WTMAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        Сервис который запускает адаптер для синхронизации
+        <service
+            android:name=".sync.WTMSyncService"
+            android:exported="true">
+
+            Фильтр который говорит системе о том что это адаптер и его можно подёргать
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        -->
+
+    </application>
+
+</manifest>
