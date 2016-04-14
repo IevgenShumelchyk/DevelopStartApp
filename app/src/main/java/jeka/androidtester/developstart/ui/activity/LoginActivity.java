@@ -18,15 +18,29 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+
+        binding.btnIntentExplicit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //view.animate();
-                Timber.d("Show FragmentsActivity");
-                Intent intent = new Intent(view.getContext(), FragmentsActivity.class);
+                Timber.d("Show FragmentsActivity by Explicit Intent");
+                // Открытие новой активити с помощью явного интента
+                Intent intent = new Intent(view.getContext(), FragmentsActivity.class);  // view.getContext() or getApplicationContext()
                 startActivity(intent);
             }
         });
 
+        binding.btnIntentImplicit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //view.animate();
+                Timber.d("Show ImplicitIntentActivity by Implicit Intent");
+                // Открытие новой активити с помощью неявного интента (с выбором)
+                Intent intent = new Intent("Jeka.AndroidTester.ImplicitIntent");  // view.getContext() or getApplicationContext()
+                // передаем параметр
+                intent.putExtra("mess", "This Message from LoginActivity");
+                startActivity(intent);
+            }
+        });
     }
 }
