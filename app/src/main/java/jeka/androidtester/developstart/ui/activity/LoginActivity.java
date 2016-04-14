@@ -1,5 +1,6 @@
 package jeka.androidtester.developstart.ui.activity;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,12 +18,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-
         binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //view.animate();
-                Timber.d("login success");
+                Timber.d("Show FragmentsActivity");
+                Intent intent = new Intent(view.getContext(), FragmentsActivity.class);
+                startActivity(intent);
             }
         });
 
